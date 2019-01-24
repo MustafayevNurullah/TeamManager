@@ -66,13 +66,13 @@
             this.Name9 = new System.Windows.Forms.TextBox();
             this.Name11 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Position2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Position2 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Tactic = new System.Windows.Forms.ComboBox();
             this.GenerateTeam = new System.Windows.Forms.Button();
+            this.Tactic = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,7 @@
             this.CountryCB.Name = "CountryCB";
             this.CountryCB.Size = new System.Drawing.Size(121, 21);
             this.CountryCB.TabIndex = 1;
+            this.CountryCB.SelectedIndexChanged += new System.EventHandler(this.CountryCB_SelectedIndexChanged);
             // 
             // Position
             // 
@@ -125,6 +126,7 @@
             // 
             this.Position1.Location = new System.Drawing.Point(41, 89);
             this.Position1.Name = "Position1";
+            this.Position1.ReadOnly = true;
             this.Position1.Size = new System.Drawing.Size(100, 20);
             this.Position1.TabIndex = 5;
             // 
@@ -132,6 +134,7 @@
             // 
             this.Position6.Location = new System.Drawing.Point(41, 223);
             this.Position6.Name = "Position6";
+            this.Position6.ReadOnly = true;
             this.Position6.Size = new System.Drawing.Size(100, 20);
             this.Position6.TabIndex = 5;
             // 
@@ -139,6 +142,7 @@
             // 
             this.Position5.Location = new System.Drawing.Point(41, 197);
             this.Position5.Name = "Position5";
+            this.Position5.ReadOnly = true;
             this.Position5.Size = new System.Drawing.Size(100, 20);
             this.Position5.TabIndex = 5;
             // 
@@ -146,6 +150,7 @@
             // 
             this.Position4.Location = new System.Drawing.Point(41, 166);
             this.Position4.Name = "Position4";
+            this.Position4.ReadOnly = true;
             this.Position4.Size = new System.Drawing.Size(100, 20);
             this.Position4.TabIndex = 5;
             // 
@@ -153,6 +158,7 @@
             // 
             this.Position3.Location = new System.Drawing.Point(41, 140);
             this.Position3.Name = "Position3";
+            this.Position3.ReadOnly = true;
             this.Position3.Size = new System.Drawing.Size(100, 20);
             this.Position3.TabIndex = 5;
             // 
@@ -160,6 +166,7 @@
             // 
             this.Position10.Location = new System.Drawing.Point(41, 332);
             this.Position10.Name = "Position10";
+            this.Position10.ReadOnly = true;
             this.Position10.Size = new System.Drawing.Size(100, 20);
             this.Position10.TabIndex = 5;
             // 
@@ -167,6 +174,7 @@
             // 
             this.Position8.Location = new System.Drawing.Point(41, 275);
             this.Position8.Name = "Position8";
+            this.Position8.ReadOnly = true;
             this.Position8.Size = new System.Drawing.Size(100, 20);
             this.Position8.TabIndex = 5;
             // 
@@ -174,6 +182,7 @@
             // 
             this.Position7.Location = new System.Drawing.Point(41, 249);
             this.Position7.Name = "Position7";
+            this.Position7.ReadOnly = true;
             this.Position7.Size = new System.Drawing.Size(100, 20);
             this.Position7.TabIndex = 5;
             // 
@@ -181,6 +190,7 @@
             // 
             this.Position9.Location = new System.Drawing.Point(41, 301);
             this.Position9.Name = "Position9";
+            this.Position9.ReadOnly = true;
             this.Position9.Size = new System.Drawing.Size(100, 20);
             this.Position9.TabIndex = 6;
             // 
@@ -188,8 +198,10 @@
             // 
             this.Position11.Location = new System.Drawing.Point(41, 358);
             this.Position11.Name = "Position11";
+            this.Position11.ReadOnly = true;
             this.Position11.Size = new System.Drawing.Size(100, 20);
             this.Position11.TabIndex = 7;
+            // 
             // Number2
             // 
             this.Number2.Location = new System.Drawing.Point(174, 115);
@@ -392,6 +404,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // Position2
+            // 
+            this.Position2.Location = new System.Drawing.Point(41, 115);
+            this.Position2.Name = "Position2";
+            this.Position2.ReadOnly = true;
+            this.Position2.Size = new System.Drawing.Size(100, 20);
+            this.Position2.TabIndex = 8;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -419,13 +439,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Name";
             // 
-            // Position2
-            // 
-            this.Position2.Location = new System.Drawing.Point(41, 115);
-            this.Position2.Name = "Position2";
-            this.Position2.Size = new System.Drawing.Size(100, 20);
-            this.Position2.TabIndex = 8;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.GenerateTeam);
@@ -437,14 +450,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // Tactic
-            // 
-            this.Tactic.FormattingEnabled = true;
-            this.Tactic.Location = new System.Drawing.Point(23, 37);
-            this.Tactic.Name = "Tactic";
-            this.Tactic.Size = new System.Drawing.Size(121, 21);
-            this.Tactic.TabIndex = 0;
-            // 
             // GenerateTeam
             // 
             this.GenerateTeam.Location = new System.Drawing.Point(254, 34);
@@ -453,6 +458,16 @@
             this.GenerateTeam.TabIndex = 1;
             this.GenerateTeam.Text = "Generate Team";
             this.GenerateTeam.UseVisualStyleBackColor = true;
+            this.GenerateTeam.Click += new System.EventHandler(this.GenerateTeam_Click);
+            // 
+            // Tactic
+            // 
+            this.Tactic.FormattingEnabled = true;
+            this.Tactic.Location = new System.Drawing.Point(23, 37);
+            this.Tactic.Name = "Tactic";
+            this.Tactic.Size = new System.Drawing.Size(121, 21);
+            this.Tactic.TabIndex = 0;
+            this.Tactic.SelectedIndexChanged += new System.EventHandler(this.Tactic_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -464,6 +479,7 @@
             this.Controls.Add(this.CountryCB);
             this.Controls.Add(this.label1);
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
