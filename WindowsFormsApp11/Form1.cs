@@ -19,6 +19,7 @@ namespace WindowsFormsApp11
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace WindowsFormsApp11
                 if (!(cultureList.Contains(region.EnglishName)))
                 {
                     cultureList.Add(region.EnglishName);
-                    CountryCB.Items.Add(region.EnglishName + "(" + region.ISOCurrencySymbol + ")");
+                    CountryCB.Items.Add(region.EnglishName + "(" + region.TwoLetterISORegionName + ")");
                 }
             }
 
@@ -103,7 +104,32 @@ namespace WindowsFormsApp11
 
         private void GenerateTeam_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2("AZ");
+            bool a=false;
+            string b="";
+            string c = "";
+            foreach (var item in CountryCB.SelectedItem.ToString())
+            {
+                if(item.ToString()==")")
+                {
+                    a = false;
+                }
+                if(a)
+                {
+                    b += item.ToString();
+                }
+                if(item.ToString()=="(")
+                {
+                    a = true;
+                }
+                if(!a && item.ToString()!=")" )
+                {
+                    c += item.ToString();
+
+                }
+
+            }
+          
+            Form2 form2 = new Form2(b,c,Tactic.SelectedItem);
             form2.ShowDialog();
 
 
