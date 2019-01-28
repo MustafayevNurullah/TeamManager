@@ -24,6 +24,11 @@ namespace WindowsFormsApp11
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
+
+
+
+
             foreach (CultureInfo  culture in cultureInfos)
             {
                 region = new RegionInfo(culture.LCID);
@@ -129,7 +134,7 @@ namespace WindowsFormsApp11
 
             }
           
-            Form2 form2 = new Form2(b,c,Tactic.SelectedItem);
+            Form2 form2 = new Form2(b,c,Tactic.SelectedItem.ToString());
             form2.ShowDialog();
 
 
