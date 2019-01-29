@@ -54,8 +54,10 @@ namespace WindowsFormsApp11
 
         private void Tactic_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             switch (Tactic.SelectedItem)
             {
+            
                 case "4-4-2":
                     Position1.Text = "GK";
                     Position2.Text = "LB";
@@ -109,6 +111,20 @@ namespace WindowsFormsApp11
 
         private void GenerateTeam_Click(object sender, EventArgs e)
         {
+
+            List<string> List = new List<string>();
+            List.Add(Number1.Text);
+            List.Add(Number2.Text);
+            List.Add(Number3.Text);
+            List.Add(Number4.Text);
+            List.Add(Number5.Text);
+            List.Add(Number6.Text);
+            List.Add(Number7.Text);
+            List.Add(Number8.Text);
+            List.Add(Number9.Text);
+            List.Add(Number10.Text);
+            List.Add(Number11.Text);
+
             bool a=false;
             string b="";
             string c = "";
@@ -134,7 +150,7 @@ namespace WindowsFormsApp11
 
             }
           
-            Form2 form2 = new Form2(b,c,Tactic.SelectedItem.ToString());
+            Form2 form2 = new Form2(b,c,Tactic.SelectedItem.ToString(),List);
             form2.ShowDialog();
 
 
