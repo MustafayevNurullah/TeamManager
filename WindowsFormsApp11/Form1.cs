@@ -111,7 +111,6 @@ namespace WindowsFormsApp11
 
         private void GenerateTeam_Click(object sender, EventArgs e)
         {
-
             List<string> List = new List<string>();
             List.Add(Number1.Text);
             List.Add(Number2.Text);
@@ -124,8 +123,22 @@ namespace WindowsFormsApp11
             List.Add(Number9.Text);
             List.Add(Number10.Text);
             List.Add(Number11.Text);
+            List<string> list = new List<string>();
+            list.Add(Name1.Text);
+            list.Add(Name2.Text);
+            list.Add(Name3.Text);
+            list.Add(Name4.Text);
+            list.Add(Name5.Text);
+            list.Add(Name6.Text);
+            list.Add(Name7.Text);
+            list.Add(Name8.Text);
+            list.Add(Name9.Text);
+            list.Add(Name10.Text);
+            list.Add(Name11.Text);
 
-            bool a=false;
+
+
+            bool a =false;
             string b="";
             string c = "";
             foreach (var item in CountryCB.SelectedItem.ToString())
@@ -150,7 +163,7 @@ namespace WindowsFormsApp11
 
             }
           
-            Form2 form2 = new Form2(b,c,Tactic.SelectedItem.ToString(),List);
+            Form2 form2 = new Form2(b,c,Tactic.SelectedItem.ToString(),List,list);
             form2.ShowDialog();
 
 
