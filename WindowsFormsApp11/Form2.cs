@@ -12,7 +12,7 @@ namespace WindowsFormsApp11
 {
     public partial class Form2 : Form
     {
-        public Form2(string text,string Name,string Tactic,List<string> list,List<string>List)
+        public Form2(string text,string Name,string Tactic,List<string> list,List<string>List,string number)
         {
             InitializeComponent();
             pictureBox1.Load($"https://countryflags.io/{text}/shiny/64.png");
@@ -21,8 +21,10 @@ namespace WindowsFormsApp11
 
             switch (Tactic)
             {
+
+
                 case "4-4-2":
-                    label21.Text = List[0];  
+                 label21.Text = List[0];  
                 label20.Text = List[1];
                     label19.Text = List[2];
                     label18.Text = List[3];
@@ -33,7 +35,7 @@ namespace WindowsFormsApp11
                     label13.Text = List[8];
                     label12.Text = List[9];
                     label11.Text = List[10];
-
+                    
                     label11.BackColor = Color.FromArgb(0, 128, 1);
                     label12.BackColor = Color.FromArgb(0, 128, 1);
                     label13.BackColor = Color.FromArgb(0, 128, 1);
@@ -45,23 +47,14 @@ namespace WindowsFormsApp11
                     label19.BackColor = Color.FromArgb(0, 128, 1);
                     label20.BackColor = Color.FromArgb(0, 128, 1);
                     label21.BackColor = Color.FromArgb(0, 128, 1);
-
-
-
-
-
-
-
                     label0.BackColor = Color.FromArgb(241,229,169);
                     label0.Text = list[0];
                     label1.Text = list[1];
                     label1.BackColor = Color.FromArgb(241, 229, 169);
-
                     label2.BackColor = Color.FromArgb(241, 229, 169);
                     label2.Text = list[2];
                     label3.Text = list[3];
                     label3.BackColor = Color.FromArgb(241, 229, 169);
-
                     label4.BackColor = Color.FromArgb(241, 229, 169);
                     label4.Text = list[4];
                     label5.Text = list[5];
@@ -95,7 +88,54 @@ namespace WindowsFormsApp11
                     pictureBox12.Load("o.png");
                     pictureBox13.Load("o.png");
                     pictureBox14.Load("o.png");
-
+                    if(number==pictureBox3.Name)
+                    {
+                        pictureBox3.Load("c.png");
+                    }
+                    if (number == pictureBox4.Name)
+                    {
+                        pictureBox4.Load("c.png");
+                    }
+                    if (number == pictureBox5.Name)
+                    {
+                        pictureBox5.Load("c.png");
+                    }
+                     if (number == pictureBox6.Name)
+                    {
+                        pictureBox6.Load("c.png");
+                    }
+                    if (number == pictureBox7.Name)
+                    {
+                        pictureBox7.Load("c.png");
+                    }
+                     if (number == pictureBox8.Name)
+                    {
+                        pictureBox8.Load("c.png");
+                    }
+                    if (number == pictureBox9.Name)
+                    {
+                        pictureBox9.Load("c.png");
+                    }
+                    if (number == pictureBox10.Name)
+                    {
+                        pictureBox10.Load("c.png");
+                    }
+                    if (number == pictureBox11.Name)
+                    {
+                        pictureBox11.Load("c.png");
+                    }
+                    if (number == pictureBox12.Name)
+                    {
+                        pictureBox12.Load("c.png");
+                    }
+                    if (number == pictureBox13.Name)
+                    {
+                        pictureBox13.Load("c.png");
+                    }
+                    if (number == pictureBox14.Name)
+                    {
+                        pictureBox14.Load("c.png");
+                    }
 
                     break;
                 case "4-3-3":
@@ -125,11 +165,7 @@ namespace WindowsFormsApp11
                     label21.BackColor = Color.FromArgb(0, 128, 1);
 
 
-
-
-
-
-
+                    
                     pictureBox9.Location = new Point(615, 37);
                     label14.Location = new Point(615, 87);
                     pictureBox6.Location = new Point(608, 200);
@@ -176,20 +212,88 @@ namespace WindowsFormsApp11
                     pictureBox12.Load("o.png");
                     pictureBox13.Load("o.png");
                     pictureBox14.Load("o.png");
+
+
+
+
+
+
+                    if (number == pictureBox3.Name)
+                    {
+                        pictureBox3.Load("c.png");
+                    }
+                    if (number == pictureBox4.Name)
+                    {
+                        pictureBox4.Load("c.png");
+                    }
+                    if (number == pictureBox5.Name)
+                    {
+                        pictureBox5.Load("c.png");
+                    }
+                    if (number == pictureBox6.Name)
+                    {
+                        pictureBox6.Load("c.png");
+                    }
+                    if (number == pictureBox7.Name)
+                    {
+                        pictureBox7.Load("c.png");
+                    }
+                    if (number == pictureBox8.Name)
+                    {
+                        pictureBox8.Load("c.png");
+                    }
+                    if (number == pictureBox9.Name)
+                    {
+                        pictureBox9.Load("c.png");
+                    }
+                    if (number == pictureBox10.Name)
+                    {
+                        pictureBox10.Load("c.png");
+                    }
+                    if (number == pictureBox11.Name)
+                    {
+                        pictureBox11.Load("c.png");
+                    }
+                    if (number == pictureBox12.Name)
+                    {
+                        pictureBox12.Load("c.png");
+                    }
+                    if (number == pictureBox13.Name)
+                    {
+                        pictureBox13.Load("c.png");
+                    }
+                    if (number == pictureBox14.Name)
+                    {
+                        pictureBox14.Load("c.png");
+                    }
+
                     break;
+
+
+
+
+
+
+
+
+
+
+
                 case "3-4-3":
+
+
 
                     label21.Text = List[0];
                     label20.Text = List[1];
-                    label19.Text = List[3];
+                    label19.Text = List[9];
                     label18.Text = List[2];
-                    label17.Text = List[5];
-                    label16.Text = List[5];
+                    label17.Text = List[3];
+                    label16.Text = List[4];
                     label15.Text = List[5];
-                    //label13.Text = List[7];
-                    //label11.Text = List[8];
-                    //label14.Text = List[9];
-                    //label12.Text = List[10];
+                    label13.Text = List[7];
+                    label11.Text = List[8];
+                    label14.Text = List[6];
+                    label12.Text = List[10];
 
                     label11.BackColor = Color.FromArgb(0, 128, 1);
                     label12.BackColor = Color.FromArgb(0, 128, 1);
@@ -203,14 +307,7 @@ namespace WindowsFormsApp11
                     label20.BackColor = Color.FromArgb(0, 128, 1);
                     label21.BackColor = Color.FromArgb(0, 128, 1);
 
-
-
-
-
-
-
-
-
+                    
                     pictureBox11.Location = new Point(615, 37);
                     label19.Location = new Point(615, 87);
                     pictureBox10.Location = new Point(608, 348);
@@ -222,8 +319,7 @@ namespace WindowsFormsApp11
                     pictureBox5.Load("o.png");
                     pictureBox6.Load("o.png");
                     pictureBox3.Load("o.png");
-
-
+                    
                     pictureBox7.Load("o.png");
                     pictureBox8.Load("o.png");
                     pictureBox9.Load("o.png");
