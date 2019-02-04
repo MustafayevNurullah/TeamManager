@@ -14,6 +14,7 @@ namespace WindowsFormsApp11
     public partial class Form1 : Form
     {
         string number;
+        string  radio;
         List<string> cultureList = new List<string>();
         CultureInfo[] cultureInfos = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
         RegionInfo region;
@@ -217,6 +218,24 @@ namespace WindowsFormsApp11
         private void GenerateTeam_Click(object sender, EventArgs e)
         {
 
+            radioButton1.BackColor = Color.White;
+            radioButton2.BackColor = Color.White;
+            radioButton3.BackColor = Color.White;
+            radioButton4.BackColor = Color.White;
+            radioButton5.BackColor = Color.White;
+            radioButton6.BackColor = Color.White;
+            radioButton7.BackColor = Color.White;
+            radioButton8.BackColor = Color.White;
+            radioButton9.BackColor = Color.White;
+            radioButton10.BackColor = Color.White;
+            radioButton11.BackColor = Color.White;
+
+
+
+
+
+
+
 
 
 
@@ -285,6 +304,11 @@ namespace WindowsFormsApp11
                 {
                     L = false;
                 }
+                if(item.Length>2)
+                {
+                    L = false;
+
+                }
                 if(Int32.TryParse(item.ToString(),out int p )==false)
                 {
                     L = false;
@@ -299,6 +323,7 @@ namespace WindowsFormsApp11
                     {
                         L = false;
                     }
+                    
                 }
 
 
@@ -311,7 +336,7 @@ namespace WindowsFormsApp11
                 }
             }
 
-            if (L && l && number!=string.Empty)
+            if (L && l && number!=string.Empty && radio!=string.Empty)
             {
 
 
@@ -346,54 +371,74 @@ namespace WindowsFormsApp11
             }
             else
             {
-                if(Number1.Text==string.Empty || Int32.TryParse(Number1.Text,out int p)==false)
+                if(radio!="1")
+                {
+                    radioButton1.BackColor = Color.Red;
+                    radioButton2.BackColor = Color.Red;
+
+                    radioButton3.BackColor = Color.Red;
+
+                    radioButton4.BackColor = Color.Red;
+
+                    radioButton5.BackColor = Color.Red;
+
+                    radioButton6.BackColor = Color.Red;
+
+                    radioButton7.BackColor = Color.Red;
+                    radioButton8.BackColor = Color.Red;
+                    radioButton9.BackColor = Color.Red;
+                    radioButton10.BackColor = Color.Red;
+                    radioButton11.BackColor = Color.Red;
+
+                }
+                if (Number1.Text.Length > 2 || Number1.Text==string.Empty || Int32.TryParse(Number1.Text,out int p)==false)
                 {
                     Number1.BackColor = Color.Red;
                 }
-                if (Number2.Text == string.Empty || Int32.TryParse(Number2.Text, out int y) == false)
+                if (Number2.Text.Length > 2 || Number2.Text == string.Empty || Int32.TryParse(Number2.Text, out int y) == false)
                 {
                     Number2.BackColor = Color.Red;
                 }
-                if (Number3.Text == string.Empty || Int32.TryParse(Number3.Text, out int pas) == false)
+                if (Number3.Text.Length > 2 || Number3.Text == string.Empty || Int32.TryParse(Number3.Text, out int pas) == false)
                 {
                     Number3.BackColor = Color.Red;
                 }
-                if (Number4.Text == string.Empty || Int32.TryParse(Number4.Text, out int pasdf) == false)
+                if (Number4.Text.Length > 2 || Number4.Text == string.Empty || Int32.TryParse(Number4.Text, out int pasdf) == false)
                 {
                     Number4.BackColor = Color.Red;
                 }
-                if (Number5.Text == string.Empty || Int32.TryParse(Number1.Text, out int pdgf) == false)
+                if (Number5.Text.Length > 2 || Number5.Text == string.Empty || Int32.TryParse(Number1.Text, out int pdgf) == false)
                 {
                     Number5.BackColor = Color.Red;
                 }
-                if (Number6.Text == string.Empty || Int32.TryParse(Number6.Text, out int pfgh) == false)
+                if (Number6.Text.Length > 2 || Number6.Text == string.Empty || Int32.TryParse(Number6.Text, out int pfgh) == false)
                 {
                     Number6.BackColor = Color.Red;
                 }
-                if (Number7.Text == string.Empty || Int32.TryParse(Number7.Text, out int pcbc) == false)
+                if (Number7.Text.Length > 2 || Number7.Text == string.Empty || Int32.TryParse(Number7.Text, out int pcbc) == false)
                 {
                     Number7.BackColor = Color.Red;
                 }
-                if (Number8.Text == string.Empty || Int32.TryParse(Number8.Text, out int phjk) == false)
+                if (Number8.Text.Length > 2 || Number8.Text == string.Empty || Int32.TryParse(Number8.Text, out int phjk) == false)
                 {
                     Number8.BackColor = Color.Red;
                 }
-                if (Number9.Text == string.Empty || Int32.TryParse(Number9.Text, out int phjkw) == false)
+                if (Number9.Text.Length > 2 || Number9.Text == string.Empty || Int32.TryParse(Number9.Text, out int phjkw) == false)
                 {
                     Number9.BackColor = Color.Red;
                 }
-                if (Number10.Text == string.Empty || Int32.TryParse(Number10.Text, out int pfgdgd) == false)
+                if (Number10.Text.Length > 2 ||Text == string.Empty || Int32.TryParse(Number10.Text, out int pfgdgd) == false)
                 {
                     Number10.BackColor = Color.Red;
                 }
-                if (Number11.Text == string.Empty || Int32.TryParse(Number11.Text, out int tuytu) == false)
+                if (Number11.Text.Length > 2 || Number11.Text == string.Empty || Int32.TryParse(Number11.Text, out int tuytu) == false)
                 {
                     Number11.BackColor = Color.Red;
                 }
 
 
 
-                if(Name1.Text==string.Empty)
+                if(  Name1.Text==string.Empty)
                 {
                     Name1.BackColor = Color.Red;
                 }
@@ -452,7 +497,7 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox5";
-
+            radio = "1";
             // number = radioButton1.Text;
 
         }
@@ -461,6 +506,7 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox7";
+            radio = "1";
 
             // number = radioButton2.Text;
 
@@ -470,6 +516,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox10";
+            radio = "1";
+
 
             //number = radioButton3.Text;
 
@@ -479,6 +527,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox11";
+            radio = "1";
+
 
             // number = radioButton4.Text;
 
@@ -488,6 +538,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox12";
+            radio = "1";
+
 
             // number = radioButton5.Text;
 
@@ -497,6 +549,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox3";
+            radio = "1";
+
 
             // number = radioButton6.Text;
 
@@ -506,6 +560,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox9";
+            radio = "1";
+
 
             //  number = radioButton7.Text;
 
@@ -515,6 +571,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox6";
+            radio = "1";
+
 
             // number = radioButton8.Text;
 
@@ -524,6 +582,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox8";
+            radio = "1";
+
 
             //number = radioButton9.Text;
 
@@ -533,6 +593,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox13";
+            radio = "1";
+
 
             //number = radioButton10.Text;
 
@@ -542,6 +604,8 @@ namespace WindowsFormsApp11
         {
             number = string.Empty;
             number = "pictureBox14";
+            radio = "1";
+
 
             // number = radioButton11.Text;
 
